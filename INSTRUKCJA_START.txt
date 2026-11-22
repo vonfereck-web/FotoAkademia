@@ -1,0 +1,46 @@
+FOTOAKADEMIA 2.0 – INSTRUKCJA DLA NAUCZYCIELA (POLSKA)
+
+CO TO JEST?
+Wersja demonstracyjna PWA: lekcje, symulator, quizy, konkursy i lokalny edytor treści.
+Nie jest to jeszcze system szkolny z kontami uczniów ani wspólną bazą danych.
+
+NAJPROSTSZE URUCHOMIENIE NA KOMPUTERZE:
+1. Rozpakuj FotoAkademia_2_0.zip.
+2. Wejdź do folderu FotoAkademia_2_0.
+3. Otwórz index.html w Chrome lub Edge.
+4. Lekcje, quizy i symulator powinny działać od razu. Instalacja PWA i offline wymagają publikacji przez HTTPS.
+
+BEZPŁATNA PUBLIKACJA W INTERNECIE:
+1. Otwórz https://dash.cloudflare.com/ i załóż darmowe konto.
+2. Przejdź do Workers & Pages, następnie utwórz aplikację Pages metodą Direct Upload / Drag and drop.
+3. Wpisz nazwę projektu, np. fotoakademia-szkola (o ile dostępna).
+4. Przeciągnij ROZPAKOWANY folder FotoAkademia_2_0 lub plik ZIP z plikami aplikacji.
+5. Wybierz Deploy site. Otwórz adres podany przez Cloudflare, kończący się na .pages.dev.
+6. Upewnij się, że otwiera się ekran główny FotoAkademii.
+
+ANDROID:
+1. Otwórz opublikowany adres w Chrome.
+2. Menu ⋮ -> Zainstaluj aplikację albo Dodaj do ekranu głównego.
+3. Uruchom ikonę FotoAkademia.
+
+IPHONE:
+1. Otwórz adres w Safari.
+2. Udostępnij -> Dodaj do ekranu początkowego.
+3. Potwierdź dodanie.
+
+AKTUALIZACJE:
+Treści dodane w panelu są zapisywane tylko w lokalnej pamięci konkretnej przeglądarki.
+Eksportuj kopię JSON przed czyszczeniem danych. Import odtwarza materiały na tym samym lub innym urządzeniu.
+Żeby wszyscy uczniowie zobaczyli te same nowe treści, trzeba wdrożyć centralną bazę danych i bezpieczny panel nauczyciela. Sama publikacja obecnej wersji tego nie zapewnia.
+Zmiany w kodzie aplikacji publikuj ponownie przez Create new deployment w Cloudflare Pages.
+
+BEZPIECZEŃSTWO:
+Nie wprowadzaj danych osobowych uczniów ani ich zdjęć. Panel nie ma logowania ani kontroli uprawnień.
+Nie korzystaj z tej wersji do oficjalnego oceniania. Quiz zapisuje punkty lokalnie.
+
+WERYFIKACJA WIEDZY:
+Treści startowe dotyczą sprawdzonych podstaw optyki, ekspozycji i historii. Przed publikacją dla uczniów nauczyciel powinien zatwierdzić materiały; nowe treści dodane w panelu nie są automatycznie weryfikowane.
+
+DOKUMENTACJA PLATFORMY:
+https://developers.cloudflare.com/pages/get-started/direct-upload/
+https://developers.cloudflare.com/pages/platform/limits/
