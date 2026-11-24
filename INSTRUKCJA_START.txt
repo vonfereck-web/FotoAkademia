@@ -1,7 +1,7 @@
 FOTOAKADEMIA 2.0 – INSTRUKCJA DLA NAUCZYCIELA (POLSKA)
 
 CO TO JEST?
-Wersja demonstracyjna PWA: lekcje, symulator, quizy, konkursy i lokalny edytor treści.
+Aplikacja edukacyjna PWA: lekcje, symulator, quizy, konkursy i lokalny edytor treści.
 Nie jest to jeszcze system szkolny z kontami uczniów ani wspólną bazą danych.
 
 NAJPROSTSZE URUCHOMIENIE NA KOMPUTERZE:
@@ -10,13 +10,17 @@ NAJPROSTSZE URUCHOMIENIE NA KOMPUTERZE:
 3. Otwórz index.html w Chrome lub Edge.
 4. Lekcje, quizy i symulator powinny działać od razu. Instalacja PWA i offline wymagają publikacji przez HTTPS.
 
-BEZPŁATNA PUBLIKACJA W INTERNECIE:
-1. Otwórz https://dash.cloudflare.com/ i załóż darmowe konto.
-2. Przejdź do Workers & Pages, następnie utwórz aplikację Pages metodą Direct Upload / Drag and drop.
-3. Wpisz nazwę projektu, np. fotoakademia-szkola (o ile dostępna).
-4. Przeciągnij ROZPAKOWANY folder FotoAkademia_2_0 lub plik ZIP z plikami aplikacji.
-5. Wybierz Deploy site. Otwórz adres podany przez Cloudflare, kończący się na .pages.dev.
-6. Upewnij się, że otwiera się ekran główny FotoAkademii.
+GITHUB PAGES:
+Publiczny adres dla uczniów:
+https://vonfereck-web.github.io/FotoAkademia/
+
+Do przygotowywania materiałów otwórz ten sam adres z parametrem ?panel=local,
+a następnie wybierz Panel. Zmiany w tym trybie zapisują się w przeglądarce.
+Użyj eksportu JSON, aby zachować kopię materiałów.
+
+Kod aplikacji utrzymujemy w istniejącym repozytorium FotoAkademia. Sprawdź
+Settings > Pages przed zmianą ustawień publikacji. Po wdrożeniu otwórz publiczny
+adres i potwierdź działanie lekcji, quizu i laboratorium.
 
 ANDROID:
 1. Otwórz opublikowany adres w Chrome.
@@ -31,8 +35,9 @@ IPHONE:
 AKTUALIZACJE:
 Treści dodane w panelu są zapisywane tylko w lokalnej pamięci konkretnej przeglądarki.
 Eksportuj kopię JSON przed czyszczeniem danych. Import odtwarza materiały na tym samym lub innym urządzeniu.
-Żeby wszyscy uczniowie zobaczyli te same nowe treści, trzeba wdrożyć centralną bazę danych i bezpieczny panel nauczyciela. Sama publikacja obecnej wersji tego nie zapewnia.
-Zmiany w kodzie aplikacji publikuj ponownie przez Create new deployment w Cloudflare Pages.
+Aplikacja czyta opublikowane lekcje z Supabase, gdy połączenie jest dostępne.
+Centralne dodawanie treści z panelu wymaga logowania nauczyciela i zasad zapisu
+w Supabase. Lokalny eksport JSON nie publikuje treści dla uczniów.
 
 BEZPIECZEŃSTWO:
 Nie wprowadzaj danych osobowych uczniów ani ich zdjęć. Panel nie ma logowania ani kontroli uprawnień.
@@ -40,7 +45,3 @@ Nie korzystaj z tej wersji do oficjalnego oceniania. Quiz zapisuje punkty lokaln
 
 WERYFIKACJA WIEDZY:
 Treści startowe dotyczą sprawdzonych podstaw optyki, ekspozycji i historii. Przed publikacją dla uczniów nauczyciel powinien zatwierdzić materiały; nowe treści dodane w panelu nie są automatycznie weryfikowane.
-
-DOKUMENTACJA PLATFORMY:
-https://developers.cloudflare.com/pages/get-started/direct-upload/
-https://developers.cloudflare.com/pages/platform/limits/
