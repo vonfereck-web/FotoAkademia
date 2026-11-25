@@ -6,7 +6,13 @@
   <meta name="theme-color" content="#101020">
   <meta name="description" content="FotoAkademia – interaktywna nauka fotografii">
 
-  <link rel="manifest" href="manifest.webmanifest">
+  <script>
+    const teacherView = new URLSearchParams(location.search).get('panel') === 'local';
+    const manifestLink = document.createElement('link');
+    manifestLink.rel = 'manifest';
+    manifestLink.href = teacherView ? 'nauczyciel.webmanifest' : 'manifest.webmanifest';
+    document.head.append(manifestLink);
+  </script>
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 
@@ -14,6 +20,7 @@
 </head>
 
 <body>
+  <button id="app-update" class="btn alt" type="button" hidden>Odśwież do nowej wersji</button>
   <div id="app"></div>
 
   <script src="supabase-config.js"></script>
